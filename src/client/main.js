@@ -21,12 +21,11 @@ import { createApp} from 'vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import {createPinia} from "pinia"
 import App from '../client/components/ComponentePadre.vue'
-import {router} from "../router/router.js";
+
 const app = createApp(App)
 const pinia = createPinia()
 app.use(pinia)
 app.mount('#app')
-app.use(router)
 
 app.get("/hello", (req, res) => {
     res.send("Hello!");
